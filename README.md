@@ -15,6 +15,7 @@ If you like this and want to share some of your own styling with us, contact us 
 
 - Download this module from the appstore like you would with any other module;
 - Add ASu_Atlas3Extras to your after startup routine;
+- Add module role 'AnyUser' to any userroles you like;
 - Add any of the Atlas3Extras-classes to the element that you want styled.
 
 To see which classes are available per element, check your \themesource\atlas3extras\web\component\ where you will find a scss for each element. So far:
