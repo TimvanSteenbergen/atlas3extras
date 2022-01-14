@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.mendix.com/package/1.0/">
+  <modelerProject xmlns="http://www.mendix.com/modelerProject/1.0/">
+    <module name="Atlas3Extras" />
+    <projectFile path="project.mpr" />
+    <files>
+      <file path="themesource\atlas3extras\settings.json" />
+      <file path="themesource\atlas3extras\native\design-properties.json" />
+      <file path="themesource\atlas3extras\native\main.js" />
+      <file path="themesource\atlas3extras\web\design-properties.json" />
+      <file path="themesource\atlas3extras\web\main.scss" />
+      <file path="themesource\atlas3extras\web\component\datagrid.scss" />
+      <file path="themesource\atlas3extras\web\component\datagrid2.scss" />
+      <file path="themesource\atlas3extras\web\component\popup.scss" />
+      <file path="themesource\atlas3extras\web\component\radiobutton.scss" />
+      <file path="themesource\atlas3extras\web\component\tooltip.scss" />
+      <file path="widgets\com.mendix.widget.web.Datagrid.mpk" />
+      <file path="widgets\com.mendix.widget.web.DatagridDateFilter.mpk" />
+      <file path="widgets\com.mendix.widget.web.DatagridDropdownFilter.mpk" />
+      <file path="widgets\com.mendix.widget.web.DatagridTextFilter.mpk" />
+    </files>
+  </modelerProject>
+</package>

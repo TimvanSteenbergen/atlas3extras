@@ -1,0 +1,62 @@
+//*** DataGrid2 ***//
+// See https://atlasdesignsystem.mendixcloud.com/p/datagrid-2 for demos of the standard Mendix Atlas3 datagrid2
+// See https://baseapplication-sandbox.mxapps.io/p/demodatagrid2extras for Atlas3Extra-samples 
+
+//*** DataGrid2 extracompact ***//
+//Make the line of the datagrid2 as compact as possible
+.compactline {
+
+    .tr>.td {
+        padding: 2px;
+
+        button {
+            padding: 0 2px;
+        }
+    }
+}
+
+//Make the Datagrid2 filters much smaller, taking up a more reasonable amount of space
+.compactfilter {
+
+    .th {
+        padding: 0;
+        line-height: 15px;
+    }
+
+    .filter {
+        .dropdown-container {
+            .form-control {
+                padding: 0;
+                // border-left: none;
+            }
+        }
+
+        .filter-container {
+            .form-control {
+                padding: 0;
+                border-left: none;
+            }
+
+            .react-datepicker-wrapper,
+            .filter-selector .filter-selector-content .filter-selector-button {
+                padding: 0;
+                border-right: none;
+
+                input {
+                    border-left: none;
+                    border-right: none;
+                    border-top-right-radius: 0;
+                    border-bottom-right-radius: 0;
+                }
+            }
+
+            .btn-calendar {
+                margin-left: 0;
+                padding: 0;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border-left: none;
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@import '../../../theme/web/custom-variables';
+//
+// Extras for Atlas3
+//
+// Changing any styling of your application should go in this order
+// - Edit the styles in Mendix's web-editor 'Studio'. Click the pencil on the bottom in the left-side-menu
+//       There you can set company colors, the logo and the font
+// - If that is not enough, then edit any style by changing values in custom-variables.scss. 
+//       There are hundreds of variables to set colors, borders and logo-formats,
+//       and also line heights, gutters and spacing
+// - Choose one of these styles to add to page-elements that you want to have this style
+//       If you find what you like, use it.
+//       If not, create your own .class{and styles}, save it here and use it anywhere in your app. 
+
+// If you like what you created, and think others could benefit: 
+//     share your creation by mailing your atlas3extra.scss to servicemendixcloud@tieka.nl
+@import 'component/tooltip.scss';
+@import 'component/datagrid.scss';
+@import 'component/datagrid2.scss';
+@import 'component/popup.scss';
+@import 'component/radiobutton.scss';
+
+button.topright{
+    // Moving a button to the top-right position, ending up on the top-bar, leaving 150px for any button that is already on the top-right.
+    position: absolute;
+    top: 5px;
+    right: 150px;
+    z-index: 111;
+}
+
+//== Contentblocks
+// See https://baseapplication-sandbox.mxapps.io/atlas3extras tab 'Content blocks' for Atlas3Extra-samples 
+//
+
+.shadowed {
+    //with a shade around the border of the object. Object can be any object, from container, to button, to menu-item.
+    box-shadow: 3px 3px 5px 0 mix($brand-primary, white, 40%);
+
+    &:hover {
+        box-shadow: 3px 3px 10px 2px mix($brand-primary, white, 60%); // Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5    
+    }
+
+    padding: 10px; //Needs padding to add space between content and the now visible border. 
+}//.shadowed
+
+.h2aslabel {
+    //With border and shade and with label and h2-text in top-border
+    border: 2px solid mix($brand-primary, white, 60%);
+    padding: 30px 10px 10px 10px;
+    margin: 25px 31px 31px 0px;
+    position: relative;
+
+    >h2,
+    >div>h2 {
+        position: absolute;
+        top: -20px;
+        left: 40px;
+        height: 40px;
+        background-color: mix($brand-primary, grey, 90%);
+        color: white;
+        text-align: center;
+        padding: 0 10px;
+    }
+}
+
+.atlas3-extra-phone {
+    font-family: sans-serif;
+    text-align: center;
+
+    .mx-header {
+        color: #EFF23A;
+
+        div.mx-header-left {
+            div {
+                top: 0;
+
+                img {
+                    padding: 0;
+                    min-width: 40 px;
+                    min-height: 40 px;
+                }
+            }
+
+            height: 17px;
+        }
+
+        div.mx-header-center {
+            .mx-title {
+                color: #EFF23A;
+            }
+        }
+
+        div.mx-header-right {
+            button {
+                color: #EFF23A;
+                background-color: $brand-info;
+                margin-top: 0px;
+                margin-left: 20px;
+                border: none;
+            }
+        }
+    }
+}

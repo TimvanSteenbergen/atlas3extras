@@ -1,0 +1,197 @@
+.mx-radiobuttons.inline {
+    // & {
+    // See https://atlasdesignsystem.mendixcloud.com/p/radiobuttons for the standard Mendix Atlas3 radio buttons
+    // See https://baseapplication-sandbox.mxapps.io/p/demoradiobuttons tab 'Radio buttons' for Atlas3Extra-samples 
+    // 
+    // For adding one class to all the radio-buttons in your application: for class you want, comment out the line having the classname and last lines containing the closing '}'. 
+    // For changing one radio-button: Add any of these classes to your radio-button. 'gapless', 'circled', 'labelonly-rectangle'
+
+    &.gapless {
+
+        // Closing the gap between the clickable area of the radio and the clickable area of the label 
+        div.radio {
+            input[type="radio"] {
+                margin-right: 0;
+                padding-right: 12px;
+            }
+
+            label {
+                margin-left: 0;
+                padding-left: 12px;
+            }
+        }
+    }
+
+    &.circled {
+
+        // Place a circle around the radio+label, making it very clear which radio belongs to which label
+        .radio {
+            background-color: $brand-default;
+            border: solid 1px $gray-light;
+            border-radius: 20px;
+            padding: 0 5px 6px 3px;
+
+            input[type="radio"] {
+                margin: 2px 10px -2px 2px;
+                background-color: white;
+                border-radius: 15px;
+            }
+
+            label {
+                margin: 2px 1px -2px 1px;
+            }
+        }
+
+        &.alarming {
+            .radio {
+                background-color: mix($color-danger-lighter, white, 90%);
+            }
+        }
+    }
+
+    &.readonlydefaultcursor {
+
+        //When it is Readonly, keep the cursor default at all times
+        .radio {
+            input[type="radio"]:disabled,
+            input[type="radio"]:disabled+label {
+                &:hover,
+                &:focus {
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+    &.readonlyshowonlyselected {
+
+        //When it is Readonly, only show the selected one and default cursor
+        .radio {
+            margin: 0;
+            input[type="radio"] {
+
+                &:disabled,
+                &:disabled+label {
+                    display: none;
+                }
+
+                &:disabled:checked,
+                &:disabled:checked+label {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    &.labelonly-rectangle,
+    &.labelonly-ellipsis {
+
+        //Giving them a more fancy look, posing as labels
+        .radio {
+
+            input[type="radio"] {
+                display: none;
+                &:disabled:checked{
+                    display: none;
+                }
+
+                &:focus+label {
+                    border: 1px dashed #666;
+                }
+
+                &:checked+label {
+                    //Changing the active radio button
+                    background-color: $color-success-darker; // inverting text and background
+                    color: #EFFEFE; // inverting text and background
+                    border: 1px solid rgb(46, 46, 46); // because of ARIA, colorblind people need to be able to distinguish the selected choice
+                }
+            }
+
+            label {
+                display: inline-block;
+                background-color: mix($color-success-darker, white, 10%);
+                padding: 4px 11px;
+                cursor: pointer;
+                border: 1px solid #999; // because of ARIA, colorblind people need to be able to distinguish the options
+                margin-left: 0;
+
+                &:hover {
+                    background-color: mix($color-success-darker, white, 60%);
+                }
+            }
+
+        }
+
+        &.alarming {
+            .radio {
+                label {
+                    background-color: mix($color-danger-lighter, white, 90%);
+
+                    &:checked {
+                        background-color: mix($color-danger-lighter, white, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+    &.labelonly-ellipsis {
+        .radio {
+            input[type="radio"] {
+                +label {
+                    border-radius: 80% 20%;
+                }
+
+                &:checked+label {
+                    border-radius: 20% 80%;
+                }
+            }
+        }
+    }
+
+    &.labelonly-rectangle {
+        .radio {
+            label {
+                border-radius: 4px;
+            }
+        }
+    }
+
+    &.selectedontheleft {
+
+        //Placing the selected option on the left
+        &.notselected {
+            .radio {
+                margin: 0;
+
+                input[type="radio"] {
+
+                    &+label {
+                        margin: 0 10px 0 10px;
+                    }
+
+                    &:checked+label {
+                        display: none;
+                    }
+                }
+            }
+        }
+
+        &.selected {
+            .radio {
+                margin: 0;
+
+                input[type="radio"] {
+
+                    &+label {
+                        display: none;
+                    }
+
+                    &:checked+label {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

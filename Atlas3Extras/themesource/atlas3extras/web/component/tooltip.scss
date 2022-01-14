@@ -1,0 +1,48 @@
+// Tooltip showing the title-property content of a link above the link when hovering over it 
+// For a demo of its use, see service.mendixcloud.com menu UI-helpers => Demo of Atlas3Extras Tooltip
+a.tooltiptop[title],
+a.tooltipright[title] {
+    position: relative;
+
+    &::after {
+        content: attr(title);
+        display: block;
+        position: absolute;
+        background-color: gray;
+        padding: 1em 3em;
+        color: white;
+        border-radius: 5px;
+        font-size: larger;
+        bottom: 0;
+        left: 0;
+        white-space: nowrap;
+        transform: scale(0);
+    }
+
+    &:hover::after {
+        transform: scale(1);
+    }
+}
+
+a.tooltiptop[title] {
+    &::after {
+        transition:
+            transform ease-out 100ms,
+            bottom ease-out;
+    }
+
+    &:hover::after {
+        bottom: 100%;
+    }
+}
+a.tooltipright[title] {
+    &::after {
+        transition:
+            transform ease-out 100ms,
+            left ease-out;
+    }
+
+    &:hover::after {
+        left: 100%;
+    }
+}

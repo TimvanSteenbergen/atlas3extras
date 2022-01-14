@@ -1,0 +1,77 @@
+//*** DataGrid extra classes ***//
+// See https://atlasdesignsystem.mendixcloud.com/p/datagrids for demos of the standard Mendix Atlas3 datagrids
+// See https://baseapplication-sandbox.mxapps.io/p/demodatagridextras for Atlas3Extra-samples 
+
+.mx-datagrid {
+
+    &.selectionradiobutton tr,
+    &.selectionradiobutton2 tr,
+    &.selectioncheckbox tr {
+        position: relative;
+
+        td:first-child ::before {
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 5px;
+        }
+    }
+
+    &.selectionradiobutton tr {
+        td:first-child ::before {
+            content: url('../img/Atlas3Extras$Image_collection$radiobutton_empty_14px.png?637777527153148831');
+        }
+
+        &.selected td:first-child ::before {
+            content: url('../img/Atlas3Extras$Image_collection$radiobutton_selected_14px.png?637777527153148831');
+        }
+
+    }
+
+    &.selectionradiobutton2 tr {
+        td:first-child ::before {
+            content: url('../img/Atlas3Extras$Image_collection$radiobutton2_empty_14px.png?637777527153148831');
+        }
+
+        &.selected td:first-child ::before {
+            content: url('../img/Atlas3Extras$Image_collection$radiobutton2_selected_14px.png?637777527153148831');
+        }
+    }
+
+    &.selectioncheckbox tr {
+        td:first-child ::before {
+            content: url('../img/Atlas3Extras$Image_collection$checkbox_empty_14px.png?637777527153148831');
+        }
+
+        &.selected td:first-child ::before {
+            content: url('../img/Atlas3Extras$Image_collection$checkbox_selected_14px.png?637777527153148831');
+        }
+    }
+
+
+    &.sticky-header {
+        // Make the Datagrid header row stick when scrolling down.
+
+        .mx-grid-content {
+            // Setting the height is necessary and generic, so each datagrid using class sticky-header, will have this height.
+            height: 200px !important; //'!important' is the only way to override 'style="height:auto"', which the datagrid-widget adds to mx-grid-content 
+            overflow: auto;
+
+            .mx-name-head-row {
+                th {
+                    position: -webkit-sticky;
+                    position: sticky;
+                    top: 0;
+                    background-color: $brand-default;
+                }
+            }
+        }
+
+        //To allow some more specific height you can also add 'height500px' in addition to 'sticky-header'
+        &.height500px {
+            .mx-grid-content {
+                height: 500px !important; //'!important' is the only way to override 'style="height:auto"', which the datagrid-widget adds to mx-grid-content 
+            }
+        }
+    }
+}
