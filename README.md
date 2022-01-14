@@ -29,5 +29,6 @@ This module has no dependencies.
 
 ## Help or donate
 
-To help: Fork me, make your change, upload a pullrequest
+To help: Fork me, make your change, upload a pullrequest.
+
 Just using it? Than it is only fair to make a donation for our effort put in this module and for keeping use enthousiast of providing you these nice extras.
