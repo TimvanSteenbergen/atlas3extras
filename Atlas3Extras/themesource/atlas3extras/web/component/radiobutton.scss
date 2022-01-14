@@ -26,7 +26,7 @@
 
         // Place a circle around the radio+label, making it very clear which radio belongs to which label
         .radio {
-            background-color: $brand-default;
+            // background-color: $brand-default;
             border: solid 1px $gray-light;
             border-radius: 20px;
             padding: 0 5px 6px 3px;
@@ -44,7 +44,7 @@
 
         &.alarming {
             .radio {
-                background-color: mix($color-danger-lighter, white, 90%);
+                background-color: mix($color-warning-lighter, white, 90%);
             }
         }
     }
@@ -53,8 +53,10 @@
 
         //When it is Readonly, keep the cursor default at all times
         .radio {
+
             input[type="radio"]:disabled,
             input[type="radio"]:disabled+label {
+
                 &:hover,
                 &:focus {
                     cursor: default;
@@ -68,6 +70,7 @@
         //When it is Readonly, only show the selected one and default cursor
         .radio {
             margin: 0;
+
             input[type="radio"] {
 
                 &:disabled,
@@ -91,7 +94,8 @@
 
             input[type="radio"] {
                 display: none;
-                &:disabled:checked{
+
+                &:disabled:checked {
                     display: none;
                 }
 
@@ -194,4 +198,9 @@
             }
         }
     }
+}
+
+.favorite {
+    background-color: mix($brand-success, white, 20%);
+    border: 2px dashed mix($brand-success, white, 40%);
 }

@@ -17,6 +17,7 @@ a.tooltipright[title] {
         left: 0;
         white-space: nowrap;
         transform: scale(0);
+        transition: transform ease-out 100ms;
     }
 
     &:hover::after {
@@ -25,24 +26,13 @@ a.tooltipright[title] {
 }
 
 a.tooltiptop[title] {
-    &::after {
-        transition:
-            transform ease-out 100ms,
-            bottom ease-out;
-    }
-
     &:hover::after {
         bottom: 100%;
     }
 }
-a.tooltipright[title] {
-    &::after {
-        transition:
-            transform ease-out 100ms,
-            left ease-out;
-    }
 
+a.tooltipright[title] {
     &:hover::after {
-        left: 100%;
+        left: 110%;
     }
 }
