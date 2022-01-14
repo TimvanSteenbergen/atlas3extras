@@ -27,7 +27,7 @@ To see which classes are available per element, check your \themesource\atlas3ex
 
 ## Dependencies
 
-This module has no dependencies.
+This module is of course dependent on module [Atlas_Core](https://marketplace.mendix.com/link/component/117187/Mendix/Atlas-Core), since it is extending that one. It als is dependent on [Data Widgets](https://marketplace.mendix.com/link/component/116540/Mendix/Data-Widgets).
 
 ## Help or donate
 
